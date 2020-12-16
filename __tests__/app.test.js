@@ -24,7 +24,12 @@ describe('recipe-lab routes', () => {
           'mix ingredients',
           'put dough on cookie sheet',
           'bake for 10 minutes'
-        ]
+        ],
+        ingredients: [
+          { amount: 2, measurement: 'cups', name: 'flour' },
+          { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+          { amount: 1, measurement: 'egg', name: 'egg' }
+        ] 
       })
       .then(res => {
         expect(res.body).toEqual({
@@ -35,7 +40,12 @@ describe('recipe-lab routes', () => {
             'mix ingredients',
             'put dough on cookie sheet',
             'bake for 10 minutes'
-          ]
+          ],
+          ingredients: [
+            { amount: 2, measurement: 'cups', name: 'flour' },
+            { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+            { amount: 1, measurement: 'egg', name: 'egg' }
+          ] 
         });
       });
   });
@@ -65,6 +75,11 @@ describe('recipe-lab routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [
+        { amount: 2, measurement: 'cups', name: 'flour' },
+        { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+        { amount: 1, measurement: 'egg', name: 'egg' }
+      ] 
     });
 
     return request(app)
@@ -78,7 +93,12 @@ describe('recipe-lab routes', () => {
             'mix ingredients',
             'put dough on cookie sheet',
             'bake for 10 minutes'
-          ]
+          ],
+          ingredients: [
+            { amount: 2, measurement: 'cups', name: 'flour' },
+            { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+            { amount: 1, measurement: 'egg', name: 'egg' }
+          ] 
         });
       });
   });
@@ -92,6 +112,11 @@ describe('recipe-lab routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [
+        { amount: 2, measurement: 'cups', name: 'flour' },
+        { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+        { amount: 1, measurement: 'egg', name: 'egg' }
+      ] 
     });
 
     return request(app)
@@ -103,7 +128,12 @@ describe('recipe-lab routes', () => {
           'mix ingredients',
           'put dough on cookie sheet',
           'bake for 10 minutes'
-        ]
+        ],
+        ingredients: [
+          { amount: 2, measurement: 'cups', name: 'flour' },
+          { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+          { amount: 1, measurement: 'egg', name: 'egg' }
+        ] 
       })
       .then(res => {
         expect(res.body).toEqual({
@@ -114,7 +144,12 @@ describe('recipe-lab routes', () => {
             'mix ingredients',
             'put dough on cookie sheet',
             'bake for 10 minutes'
-          ]
+          ],
+          ingredients: [
+            { amount: 2, measurement: 'cups', name: 'flour' },
+            { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+            { amount: 1, measurement: 'egg', name: 'egg' }
+          ] 
         });
       });
   });
@@ -128,6 +163,11 @@ describe('recipe-lab routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [
+        { amount: 2, measurement: 'cups', name: 'flour' },
+        { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+        { amount: 1, measurement: 'egg', name: 'egg' }
+      ] 
     });
 
     return request(app)
@@ -141,7 +181,12 @@ describe('recipe-lab routes', () => {
             'mix ingredients',
             'put dough on cookie sheet',
             'bake for 10 minutes'
-          ]
+          ],
+          ingredients: [
+            { amount: 2, measurement: 'cups', name: 'flour' },
+            { amount: 1, measurement: 'bag', name: 'chocolate chips' },
+            { amount: 1, measurement: 'egg', name: 'egg' }
+          ] 
         });
       });
   });
@@ -155,7 +200,7 @@ describe('recipe-lab routes', () => {
         'mix ingredients',
         'put dough on cookie sheet',
         'bake for 10 minutes'
-      ],
+      ]
     });
 
     return await request(app)
