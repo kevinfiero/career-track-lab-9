@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS recipes;
+DROP TABLE IF EXISTS recipes CASCADE;
 DROP TABLE IF EXISTS logs;
 
 CREATE TABLE recipes (
@@ -9,9 +9,8 @@ CREATE TABLE recipes (
 
 CREATE TABLE logs (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  recipeId BIGINT REFERENCES recipes(id),
-  dateOfEvent DATE NOT NULL,
+  recipe_id BIGINT REFERENCES recipes(id),
+  date_of_event DATE NOT NULL,
   notes TEXT NOT NULL,
-  rating INTEGER NOT NULL CHECK (rating >= 0 AND rating <= 5),
-  directions TEXT[]
+  rating INTEGER NOT NULL CHECK (rating >= 0 AND rating <= 5)
 );
