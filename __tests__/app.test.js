@@ -2,8 +2,8 @@ const fs = require('fs');
 const pool = require('../lib/utils/pool');
 const request = require('supertest');
 const app = require('../lib/app');
-const Recipe = require('../lib/models/recipe');
-const Log = require('../lib/models/log');
+const Recipe = require('../lib/models/Recipe');
+const Log = require('../lib/models/Log');
 
 describe('recipe-lab routes', () => {
   beforeEach(() => {
@@ -215,7 +215,7 @@ describe('recipe-lab routes', () => {
         expect(res.body).toEqual({
           id: expect.any(String),
           recipeId: recipe.id,
-          dateOfEvent: '12/4/2020',
+          dateOfEvent: '2020-12-04',
           notes: 'pretty good',
           rating: 4
         });
@@ -272,7 +272,7 @@ describe('recipe-lab routes', () => {
         expect(res.body).toEqual({
           id: expect.any(String),
           recipeId: recipe.id, 
-          dateOfEvent: '12/4/2020', 
+          dateOfEvent: '2020-12-04', 
           notes:'pretty good', 
           rating: 4 
         });
@@ -311,7 +311,7 @@ describe('recipe-lab routes', () => {
         expect(res.body).toEqual({
           id: expect.any(String),
           recipeId: recipe.id, 
-          dateOfEvent: '12/4/2020', 
+          dateOfEvent: '2020-12-04', 
           notes:'extremely good', 
           rating: 5 
         });
@@ -342,7 +342,7 @@ describe('recipe-lab routes', () => {
         expect(res.body).toEqual({
           id: expect.any(String),
           recipeId: recipe.id, 
-          dateOfEvent: '12/4/2020', 
+          dateOfEvent: '2020-12-04', 
           notes:'pretty good', 
           rating: 4 
         });
